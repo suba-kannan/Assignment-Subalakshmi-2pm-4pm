@@ -1,0 +1,17 @@
+4. Write down 2 benefits of using semantic tags.
+
+1. Semantic tags make the structure of a webpage more meaningful and easier to understand for both developers and browsers.
+2. They improve readability, accessibility and SEO by helping screen readers and search engines recognize the purpose of each section.
+
+
+5. Compare semantic tags with <div> — when should each be used?
+
+Semantic Tags:
+
+Semantic tags like <header>, <nav>, <main>, <section>, <article>, and <footer> describe the meaning and purpose of the content they contain.
+Uses: Use semantic tags when your content has a specific role in the webpage structure such as navigation menus, page sections or articles because they improve accessibility, SEO, and readability.
+
+<div> (Non-Semantic Tag):
+
+A <div> does not describe the meaning of the content. It is only a box used to group elements.
+Uses: Use <div> when you need a generic container for styling with CSS, layout purposes or when no semantic tag matches the content.
