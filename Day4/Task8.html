@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <!-- Build a student registration form with validation -->
+
+    <h2>Student Registration Form</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" name="name" required minlength="3" placeholder="Enter your Name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="" required placeholder="ex@gmail.com"><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" required pattern="[0-9]{10}" placeholder="10 digit number"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" required min="18" max="70"><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <label for="course">Select Course:</label>
+        <select name="course" id="course">
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="data science">Data science</option>
+        <option value="devops">Devopds</option>
+      </select><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
