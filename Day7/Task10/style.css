@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background: linear-gradient(45deg, #ff66b3, #ff99cc, #ffccdd);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 5px solid #da179c;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+nav {
+    background: #ffb3da;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: #8a004f;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #c40066;
+    text-decoration: underline;
+}
+
+.intro {
+    background: #f2deeb;
+    padding: 25px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.gallery {
+    padding: 20px;
+    margin: 20px;
+    background: #ffe6f2;
+    border-radius: 10px;
+}
+
+.gallery h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #cc0066;
+}
+
+article {
+    display: inline-block;
+    width: 30%;
+    background: #ffffff;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid #ff99cc;
+}
+
+article img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+article h3 {
+    margin-top: 10px;
+    color: #ff3385;
+}
+
+article p {
+    color: #660033;
+    font-size: 15px;
+}
+
+/* Footer */
+footer {
+    background: #ff99c8;
+    text-align: center;
+    padding: 15px;
+    color: #5a0033;
+    margin-top: 20px;
+    font-weight: bold;
+}
