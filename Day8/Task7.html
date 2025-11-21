@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <style>
+        .pricing-container{
+            display: flex;/*same line*/
+            gap: 20px;/*space between the box*/
+            margin-top: 50px;
+        }
+        .plan{
+            width: 220px;
+            background: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .basic{
+            border: 2px solid blue;
+        }
+        .standard{
+            border: 3px dashed green;
+        }
+        .premium{
+            border: 4px double red;
+        }
+        .plan h2{
+            margin-bottom: 10px;
+        }
+        .plan p{
+            margin: 5px 0;
+        }
+        .plan button{
+            margin-top: 15px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Build a pricing table layout using boxes with different borders -->
+
+    <div class="pricing-container">
+        <div class="plan basic">
+            <h2>Basic</h2>
+            <p>Rs.300 / Month</p>
+            <p>1 Device</p>
+            <p>Limited Support</p>
+            <button>Select</button>
+        </div>
+
+        <div class="plan standard">
+            <h2>Standard</h2>
+            <p>Rs.500 / Month</p>
+            <p>3 Devices</p>
+            <p>Priority Support</p>
+            <button>Select</button>
+        </div>
+
+        <div class="plan premium">
+            <h2>Premium</h2>
+            <p>Rs.1000 / Month</p>
+            <p>Unlimited Devices</p>
+            <p>24/7 Support</p>
+            <button>Select</button>
+        </div>
+    </div>
+
+</body>
+</html>
