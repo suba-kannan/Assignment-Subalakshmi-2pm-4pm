@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Grid Row</title>
+    <style>
+        .photo-row{
+            display: flex;
+            gap: 10px;
+            padding: 20px;
+            align-items: center; /* vertical centering of images */
+            flex-wrap: wrap; /* allow wrapping on smaller screens */
+            justify-content: center; /* center the row horizontally */
+        }
+
+        .photo-row img{
+            flex: 1 1 200px; /* grow,shrink, base width 200px */
+            height: 150px;  
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="photo-row">
+  <img src="https://picsum.photos/id/1015/400/300" alt="Photo 1">
+  <img src="https://picsum.photos/id/1016/400/300" alt="Photo 2">
+  <img src="https://picsum.photos/id/1018/400/300" alt="Photo 3">
+  <img src="https://picsum.photos/id/1020/400/300" alt="Photo 4">
+</div>
+
+</body>
+</html>
