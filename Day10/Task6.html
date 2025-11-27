@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card{
+            width: 300px;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            font-family: "Segoe UI", sans-serif;
+        }
+        .card img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a “profile card” with gradient background and custom fonts -->
+    <div class="card">
+        <img src="data:image/jpeg;base64,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" alt="Profile">
+        <h2>Subalakshmi</h2>
+        <p>Full Stack Developer</p>
+    </div>
+
+</body>
+</html>

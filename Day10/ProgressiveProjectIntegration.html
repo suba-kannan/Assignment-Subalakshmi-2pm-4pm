@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+        }
+        nav{
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            z-index: 1000;
+        }
+        nav ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover{
+            color: #3c55d0;
+        
+        }
+        .hero{
+            height: 350px;
+            padding-top: 60px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+        }
+        .hero h1{
+            font-size: 48px;
+            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+        }
+        .projects{
+            padding: 50px;
+            color: white;
+            height: 300px;
+            background: 
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("https://images.unsplash.com/photo-1498050108023-c5249f4df085")
+                center/cover no-repeat;
+        }
+        .projects h2{
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Welcome to My Portfolio</h1>
+    </div>
+
+    <div class="projects">
+        <h2>My Projects</h2>
+        <p>These are some of the works I have created.</p>
+    </div>
+
+</body>
+</html>
