@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-self</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: cornflowerblue;
+            height: 150px;
+            align-items: center;
+        }
+        .box{
+            background-color: blueviolet;
+            margin: 10px;
+            padding: 10px;
+        }
+        .own{
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <!-- Give one flex item its own alignment using align-self. -->
+    <div class="container">
+        <div class="box">Item 1</div>
+        <div class="box own">Item 2</div>
+        <div class="box">Item 3</div>
+    </div>
+</body>
+</html>

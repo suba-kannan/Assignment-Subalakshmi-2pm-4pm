@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Layout Demo</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        /* Navbar using flexbox */
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #222;
+            padding: 15px 20px;
+            color: white;
+        }
+        nav ul{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+        nav ul li{
+            cursor: pointer;
+        }
+
+        /* Page layout using grid-template-areas */
+        .layout{
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "sidebar main"
+                "sidebar main"
+                "footer footer";
+        }
+        aside{
+            grid-area: sidebar;
+            background: #333;
+            color: white;
+            padding: 20px;
+        }
+        main{
+            grid-area: main;
+            padding: 20px;
+        }
+        footer{
+            grid-area: footer;
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Flexbox card row (Replacing float layouts) */
+        .product-row{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card{
+            flex: 1;
+            min-width: 200px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Grid photo gallery */
+        .gallery{
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        .gallery img{
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Center element using flexbox */
+        .center-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ddd;
+            height: 120px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <h2>My Website</h2>
+        <ul>
+            <li>Home</li>
+            <li>Dashboard</li>
+            <li>Products</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <!-- Grid template area layout -->
+    <div class="layout">
+        <aside>
+            <h3>Sidebar</h3>
+            <p>Links</p>
+            <p>Settings</p>
+            <p>Profile</p>
+        </aside>
+
+        <main>
+            <h2>Modern Layout Upgrades</h2>
+
+            <!-- Flexbox product row -->
+            <h3>Products</h3>
+            <div class="product-row">
+                <div class="card">Product 1</div>
+                <div class="card">Product 2</div>
+                <div class="card">Product 3</div>
+            </div>
+
+            <!-- Grid photo gallery -->
+            <h3>Photo Gallery</h3>
+            <div class="gallery">
+                <img src="https://picsum.photos/400/300?1">
+                <img src="https://picsum.photos/400/300?2">
+                <img src="https://picsum.photos/400/300?3">
+                <img src="https://picsum.photos/400/300?4">
+                <img src="https://picsum.photos/400/300?5">
+            </div>
+
+            <!-- Centerd box using flexbox -->
+            <h3>Centered Box</h3>
+            <div class="center-box">
+                <p>Centered using Flexbox</p>
+            </div>
+
+        </main>
+
+        <footer>
+            © 2025 Modern Layout Example
+        </footer>
+    </div>
+
+</body>
+</html>
