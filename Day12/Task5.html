@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min width</title>
+    <style>
+    .container{
+        display: flex;
+        width: 300px;
+        border: 2px solid black;
+        padding: 10px;
+    }
+    .text-block{
+        flex: 1;
+        min-width: 0; /* prevents overflow */
+        background-color: crimson;
+        padding: 10px;
+        overflow-wrap: break-word;
+    }
+    </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="text-block">
+    This is a very long text that would overflow outside the flex container
+    unless we apply min-width: 0 on the flex item. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi, illo ipsa eaque ab optio quia, aliquam autem consequatur est magnam quaerat rem aliquid, saepe quam illum. Est quia reiciendis ab?
+  </div>
+</div>
+
+</body>
+</html>
