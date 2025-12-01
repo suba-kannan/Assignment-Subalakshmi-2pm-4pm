@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gap</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            background: rgb(25, 118, 179);
+            padding: 20px;
+        }
+        .grid div{
+            background: rgb(219, 35, 154);
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>    
+</head>
+<body>
+    <!-- Add 20px gap between grid items. -->
+    <div class="grid">
+        <div>Item 1</div>
+        <div>Item 2</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "left right"
+                "footer footer";
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 80px 300px 80px;
+            gap: 10px;
+            text-align: center;
+            font-size: 30px;
+        }
+        header{
+            grid-area: header; 
+            background: lightblue; 
+        }
+        aside{ 
+            grid-area: left; 
+            background: lightgreen; 
+        }
+        section{ 
+            grid-area: right; 
+            background: lightpink; 
+        }
+        footer{ 
+            grid-area: footer; 
+            background: lightgray; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a Landing Page Layout using template areas (header, left, right, footer) -->
+    <div class="container">
+        <header>Header</header>
+        <aside>Left Section</aside>
+        <section>Right Section</section>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Span Columns</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            background-color: rgb(255, 239, 9);
+            padding: 40px;
+        }
+        .span{
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Make one item span 2 columns -->
+    <div class="grid">
+        <div class="span">Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+</body>
+</html>

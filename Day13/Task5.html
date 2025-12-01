@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Column Grid</title>
+    <style>
+        .con{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .grid{
+            background-color: chartreuse;
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Use repeat(4, 1fr) to create 4 equal columns. -->
+    <div class="con">
+        <div class="grid">1</div>
+        <div class="grid">2</div>
+        <div class="grid">3</div>
+        <div class="grid">4</div>
+    </div>
+</body>
+</html>
