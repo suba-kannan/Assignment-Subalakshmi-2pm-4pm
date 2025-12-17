@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      .hero{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 50px;
+        background: #f4f4f4;
+      }
+      .hero-text{
+        max-width: 50%;
+      }
+      .hero img{
+        width: 300px;
+      }
+      @media (max-width: 768px){
+        .hero{
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-text{
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Create a complete responsive hero section -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Welcome</h1>
+        <p>This is a responsive hero section</p>
+      </div>
+      <img src="https://img.freepik.com/free-photo/closeup-scarlet-macaw-from-side-view-scarlet-macaw-closeup-head_488145-3540.jpg?semt=ais_hybrid&w=740&q=80" />
+    </div>
+  </body>
+</html>

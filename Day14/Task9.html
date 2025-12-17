@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      footer{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background: black;
+        color: white;
+        padding: 20px;
+      }
+      @media (max-width: 768px){
+        footer {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Build a responsive footer with 4 → 1 columns -->
+    <footer>
+      <div>About</div>
+      <div>Services</div>
+      <div>Help</div>
+      <div>Contact</div>
+    </footer>
+  </body>
+</html>
