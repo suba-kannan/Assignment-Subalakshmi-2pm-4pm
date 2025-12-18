@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      .services{
+        display: flex;
+        gap: 20px;
+      }
+      .service{
+        flex: 1;
+        padding: 20px;
+        background: lightgray;
+      }
+      @media (max-width: 768px){
+        .services{
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Build a responsive 3-section service layout -->
+    <div class="services">
+      <div class="service">Service 1</div>
+      <div class="service">Service 2</div>
+      <div class="service">Service 3</div>
+    </div>
+  </body>
+</html>
