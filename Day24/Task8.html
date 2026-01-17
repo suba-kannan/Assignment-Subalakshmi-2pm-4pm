@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Simple Calculator</h3>
+    <input id="a" placeholder="Number 1" />
+    <input id="b" placeholder="Number 2" />
+    <button onclick="divide()">Divide</button>
+    <p id="ans"></p>
+    <script>
+      function divide() {
+        try {
+          let x = document.getElementById("a").value;
+          let y = document.getElementById("b").value;
+
+          if (x === "" || y === "") throw "Enter both numbers";
+          if (y == 0) throw "Cannot divide by zero";
+
+          let result = x / y;
+          document.getElementById("ans").innerText = "Result: " + result;
+        } catch (err) {
+          document.getElementById("ans").innerText = "Error: " + err;
+        }
+      }
+    </script>
+  </body>
+</html>
