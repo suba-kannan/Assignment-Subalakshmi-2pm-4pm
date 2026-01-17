@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Products</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h2 {
+        color: #333;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin: 5px 0;
+        padding: 5px;
+        background: #f0f0f0;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>All Products</h2>
+    <ul id="allProducts"></ul>
+
+    <h2>Affordable Products (Price < 500)</h2>
+    <ul id="filteredProducts"></ul>
+
+    <h2>Total Price of All Products</h2>
+    <p id="totalPrice"></p>
+
+    <script>
+      let products = [
+        { name: "Notebook", price: 200 },
+        { name: "Pen", price: 50 },
+        { name: "Backpack", price: 600 },
+        { name: "Water Bottle", price: 150 },
+        { name: "Headphones", price: 1200 },
+      ];
+
+      // forEach()
+      let allProductsUl = document.getElementById("allProducts");
+      products.forEach((product) => {
+        let li = document.createElement("li");
+        li.textContent = `${product.name} - ₹${product.price}`;
+        allProductsUl.appendChild(li);
+      });
+
+      // Filter
+      let affordableProducts = products.filter(
+        (product) => product.price < 500,
+      );
+      let filteredUl = document.getElementById("filteredProducts");
+      affordableProducts.forEach((product) => {
+        let li = document.createElement("li");
+        li.textContent = `${product.name} - ₹${product.price}`;
+        filteredUl.appendChild(li);
+      });
+
+      // reduce()
+      let total = products.reduce((sum, product) => sum + product.price, 0);
+      document.getElementById("totalPrice").textContent = `₹${total}`;
+    </script>
+  </body>
+</html>

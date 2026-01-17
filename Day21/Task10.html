@@ -1,0 +1,30 @@
+<!-- Create an array of products and display all names dynamically using forEach() in HTML. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array of products</title>
+  </head>
+  <body>
+    <ul id="productList"></ul>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let products = [
+          { name: "Laptop", price: 50000 },
+          { name: "Phone", price: 20000 },
+          { name: "Tablet", price: 15000 },
+        ];
+
+        let ul = document.getElementById("productList");
+
+        products.forEach((product) => {
+          let li = document.createElement("li");
+          li.textContent = product.name + " - ₹" + product.price;
+          ul.appendChild(li);
+        });
+      });
+    </script>
+  </body>
+</html>
