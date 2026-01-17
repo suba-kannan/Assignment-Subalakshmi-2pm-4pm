@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #parentBox {
+        padding: 40px;
+        background: lightblue;
+      }
+      #childBox {
+        padding: 40px;
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Click the Orange (Child) Box</h3>
+
+    <div id="parentBox">
+      Parent
+      <div id="childBox">Child</div>
+    </div>
+
+    <script>
+      const parent = document.getElementById("parentBox");
+      const child = document.getElementById("childBox");
+
+      parent.addEventListener(
+        "click",
+        () => {
+          console.log("Parent clicked (Capturing)");
+        },
+        true,
+      );
+
+      child.addEventListener(
+        "click",
+        () => {
+          console.log("Child clicked (Capturing)");
+        },
+        true,
+      );
+      parent.addEventListener("click", () => {
+        console.log("Parent clicked (Bubbling)");
+      });
+
+      child.addEventListener("click", () => {
+        console.log("Child clicked (Bubbling)");
+      });
+    </script>
+  </body>
+</html>
