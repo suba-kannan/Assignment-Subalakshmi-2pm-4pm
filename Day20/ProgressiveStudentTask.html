@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Product Listing - OOP JS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    #products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+    .price {
+      font-weight: bold;
+      color: green;
+    }
+    .digital {
+      border-left: 5px solid #6c63ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Product Listing (OOP in JavaScript)</h1>
+  <div id="products"></div>
+
+  <script>
+    // Base Class: Product
+    class Product {
+      constructor(name, price, description) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+      }
+      displayProduct(container) {
+        const div = document.createElement("div");
+        div.className = "card";
+
+        div.innerHTML = `
+          <h3>${this.name}</h3>
+          <p>${this.description}</p>
+          <p class="price">₹${this.price}</p>
+        `;
+
+        container.appendChild(div);
+      }
+    }
+    // Sub Class: DigitalProduct
+    class DigitalProduct extends Product {
+      constructor(name, price, description, fileSize) {
+        super(name, price, description);
+        this.fileSize = fileSize;
+      }
+
+      displayProduct(container) {
+        const div = document.createElement("div");
+        div.className = "card digital";
+
+        div.innerHTML = `
+          <h3>${this.name} (Digital)</h3>
+          <p>${this.description}</p>
+          <p>File Size: ${this.fileSize} MB</p>
+          <p class="price">₹${this.price}</p>
+        `;
+
+        container.appendChild(div);
+      }
+    }
+
+    // Data as Objects
+    const items = [
+      new Product("Headphones", 1500, "Wireless Bluetooth headset"),
+      new Product("Keyboard", 900, "Mechanical RGB keyboard"),
+      new DigitalProduct("React Course", 999, "Full video course", 1200),
+      new DigitalProduct("E-book", 299, "JavaScript PDF Guide", 5)
+    ];
+
+    // Render Products
+    const container = document.getElementById("products");
+
+    items.forEach(item => {
+      item.displayProduct(container);
+    });
+  </script>
+
+</body>
+</html>
